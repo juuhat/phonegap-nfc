@@ -552,7 +552,7 @@ public class NfcPlugin extends CordovaPlugin implements NfcAdapter.OnNdefPushCom
                     }
 
                     if (p2pMessage != null) {
-                        nfcAdapter.setNdefPushMessage(p2pMessage, getActivity());
+                        //nfcAdapter.setNdefPushMessage(p2pMessage, getActivity());
                     }
                 } catch (IllegalStateException e) {
                     // issue 110 - user exits app with home button while nfc is initializing
@@ -581,7 +581,7 @@ public class NfcPlugin extends CordovaPlugin implements NfcAdapter.OnNdefPushCom
     }
 
     private void startNdefBeam(final CallbackContext callbackContext, final Uri[] uris) {
-        getActivity().runOnUiThread(() -> {
+        /*getActivity().runOnUiThread(() -> {
 
             NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(getActivity());
 
@@ -603,11 +603,11 @@ public class NfcPlugin extends CordovaPlugin implements NfcAdapter.OnNdefPushCom
                     callbackContext.error(e.getMessage());
                 }
             }
-        });
+        });*/
     }
 
     private void startNdefPush(final CallbackContext callbackContext) {
-        getActivity().runOnUiThread(() -> {
+        /*getActivity().runOnUiThread(() -> {
 
             NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(getActivity());
 
@@ -624,11 +624,11 @@ public class NfcPlugin extends CordovaPlugin implements NfcAdapter.OnNdefPushCom
                 shareTagCallback = callbackContext;
                 callbackContext.sendPluginResult(result);
             }
-        });
+        });*/
     }
 
     private void stopNdefPush() {
-        getActivity().runOnUiThread(() -> {
+        /*getActivity().runOnUiThread(() -> {
 
             NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(getActivity());
 
@@ -636,11 +636,11 @@ public class NfcPlugin extends CordovaPlugin implements NfcAdapter.OnNdefPushCom
                 nfcAdapter.setNdefPushMessage(null, getActivity());
             }
 
-        });
+        });*/
     }
 
     private void stopNdefBeam() {
-        getActivity().runOnUiThread(() -> {
+        /*getActivity().runOnUiThread(() -> {
 
             NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(getActivity());
 
@@ -648,7 +648,7 @@ public class NfcPlugin extends CordovaPlugin implements NfcAdapter.OnNdefPushCom
                 nfcAdapter.setBeamPushUris(null, getActivity());
             }
 
-        });
+        });*/
     }
 
     private void addToTechList(String[] techs) {
